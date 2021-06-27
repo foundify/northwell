@@ -26,10 +26,10 @@
         src: url(Proxima\ Nova\ Regular.otf);
       }
 
-      h1,h2,h3, .btn-sm {
+      h1,h2,h3,h4,h5,h6,.btn-sm,label {
         font-family: 'Proxima Nova Bold', sans-serif;
       }
-      h1,h2,h3 {
+      h1,h2,h3,h4,h5,h6 {
         letter-spacing: -0.5px;
       }
       *{
@@ -51,6 +51,10 @@
 
       .card {
         border-radius: 8px !important;
+      }
+
+      .fade {
+      transition: all .15s !important;
       }
     </style>
 
@@ -75,7 +79,67 @@
     <p class="fs-5 col-md-8">Quickly and easily get started with Bootstrap's compiled, production-ready files with this barebones example featuring some basic HTML and helpful links. Download all our examples to get started.</p>
 
     <div class="mb-5">
-      <a href="../examples/" class="btn btn-primary btn-lg px-4">Get a Quote</a>
+      <button class="btn btn-lg btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#quoteModal">Get a Quote</button>
+
+      <div class="modal fade" id="quoteModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen w-50">
+          <div class="modal-content">
+            <div class="modal-header bg-dark text-white">
+              <h2 class="modal-title" id="exampleModalLabel">Get a Quote</h2>
+              <button type="button" class="btn btn-sm btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+            <div class="modal-body my-1">
+              <form class="row g-3" netlify>
+                <div class="col-md-6">
+                  <label for="inputName" class="form-label">Full Name</label>
+                  <input type="text" class="form-control" id="inputName" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="inputCompany" class="form-label">Company Name</label>
+                  <input type="text" class="form-control" id="inputCompany">
+                </div>
+                <div class="col-md-6">
+                  <label for="inputemail" class="form-label">Email Address</label>
+                  <input type="email" class="form-control" id="inputEmail" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="inputPhone" class="form-label">Phone Number</label>
+                  <input type="text" class="form-control" id="inputPhone">
+                </div>
+                <div class="col-md-6">
+                  <label for="inputBudget" class="form-label">What's your budget, if applicable?</label>
+                  <input type="text" class="form-control" id="inputBudget">
+                </div>
+                <div class="col-md-6">
+                  <label for="inputRefer" class="form-label">How did you hear about us?</label>
+                  <select id="inputRefer" class="form-select">
+                    <option>Friend/Family Referral</option>
+                    <option>Google/Web Browser</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+                <div class="col-md-12">
+                  <label for="inputService" class="form-label">What can we help you with?<br><small>Select multiple services by holding <code>CTRL</code> or <code>Command</code></small></label>
+                  <select id="inputService" class="form-select" size="8" multiple required>
+                    <option value="Web Design">Website Design (Enhance existing website)</option>
+                    <option value="Web Developement">Website Development (Design and Build)</option>
+                    <option value="Email Marketing">Email Marketing</option>
+                    <option value="Social Media Marketing">Social Media Marketing</option>
+                    <option value="eCommerce Website">eCommerce Website</option>
+                    <option value="Branding">Branding</option>
+                    <option value="Business Development/Consulting">Business Development/Consulting</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn btn-md btn-primary">Request Quote</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
 
     <hr class="col-3 col-md-2 mb-5">
