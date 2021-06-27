@@ -89,30 +89,30 @@
               <button type="button" class="btn btn-sm btn-secondary" data-bs-dismiss="modal">Close</button>
             </div>
             <div class="modal-body my-1">
-              <form class="row g-3" netlify>
+              <form name="Quote Form" class="row g-3" netlify>
                 <div class="col-md-6">
                   <label for="inputName" class="form-label">Full Name</label>
-                  <input type="text" class="form-control" id="inputName" required>
+                  <input type="text" class="form-control" id="inputName" name="Name" required>
                 </div>
                 <div class="col-md-6">
                   <label for="inputCompany" class="form-label">Company Name</label>
-                  <input type="text" class="form-control" id="inputCompany">
+                  <input type="text" class="form-control" id="inputCompany" name="Company">
                 </div>
                 <div class="col-md-6">
                   <label for="inputemail" class="form-label">Email Address</label>
-                  <input type="email" class="form-control" id="inputEmail" required>
+                  <input type="email" class="form-control" id="inputEmail" name="Email" required>
                 </div>
                 <div class="col-md-6">
                   <label for="inputPhone" class="form-label">Phone Number</label>
-                  <input type="text" class="form-control" id="inputPhone">
+                  <input type="text" class="form-control" id="inputPhone" name="Phone">
                 </div>
                 <div class="col-md-6">
                   <label for="inputBudget" class="form-label">What's your budget, if applicable?</label>
-                  <input type="text" class="form-control" id="inputBudget">
+                  <input type="text" class="form-control" id="inputBudget" name="Budget">
                 </div>
                 <div class="col-md-6">
                   <label for="inputRefer" class="form-label">How did you hear about us?</label>
-                  <select id="inputRefer" class="form-select">
+                  <select id="inputRefer" class="form-select" name="Referral">
                     <option>Friend/Family Referral</option>
                     <option>Google/Web Browser</option>
                     <option>Other</option>
@@ -120,7 +120,7 @@
                 </div>
                 <div class="col-md-12">
                   <label for="inputService" class="form-label">What can we help you with?<br><small>Select multiple services by holding <code>CTRL</code> or <code>Command</code></small></label>
-                  <select id="inputService" class="form-select" size="8" multiple required>
+                  <select id="inputService" class="form-select" size="8" name="Services" multiple required>
                     <option value="Web Design">Website Design (Enhance existing website)</option>
                     <option value="Web Developement">Website Development (Design and Build)</option>
                     <option value="Email Marketing">Email Marketing</option>
